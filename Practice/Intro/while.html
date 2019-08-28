@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>While</title>
+</head>
+<body>
+<script type="text/javascript">
+	var brands = ['NIKE', 'ADIDAS', 'REEBOK', 'Starbucks', 'Amazon', 'Disney', 'BMW'];
+
+	var i = 0;
+
+	while (i < brands.length) {
+		console.log(brands[i]);
+		i++;
+	}
+
+	// BREAK
+	var i = 100;
+
+	while (true) {
+	    // i가 23의 배수면 반복문을 끝냄
+	    if (i % 23 == 0) {
+	        break;
+	    }
+	    i = i + 1;
+	}
+
+	//CONTINUE
+	var i = 0;
+
+	while (i < 15) {
+	    i = i + 1;
+
+	    // i가 홀수면 console.log(i) 안하고 바로 조건부분으로 돌아감
+	    if (i % 2 == 1) {
+	        continue;
+	    }
+	    console.log(i);
+	}
+
+
+	// When to use For: limited tries
+	// 최대 다섯 번의 기회를 준다
+	for (var i = 0; i < 5; i++) {
+	  // 아이디와 비밀번호를 입력 받는다
+	  var id = window.prompt("아이디를 입력하세요");
+	  var password = window.prompt("비밀번호를 입력하세요");
+
+	  if (id === 'codeit' && password === '4321') {
+	    console.log('환영합니다. ' + id + '님.');
+	    break;
+	  } else {
+	    console.log('아이디와 비밀번호가 일치하지 않습니다.');
+	  }
+	}
+
+	// When to use While: unlimited tries
+	// 로그인 성공 여부를 보관하는 변수
+	var login = false;
+
+	// 로그인에 성공할 때까지 반복
+	while (!login) {
+	  // 아이디와 비밀번호를 입력 받는다
+	  var id = window.prompt("아이디를 입력하세요");
+	  var password = window.prompt("비밀번호를 입력하세요");
+
+	  if (id === 'codeit' && password === '4321') {
+	    console.log('환영합니다. ' + id + '님.');
+	    login = true;
+	  } else {
+	    console.log('아이디와 비밀번호가 일치하지 않습니다.');
+	  }
+	}
+
+console.log(i);
+</script>
+</body>
+</html>

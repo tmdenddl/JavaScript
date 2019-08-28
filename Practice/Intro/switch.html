@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch</title>
+</head>
+<body>
+<script type="text/javascript">
+	var inputNumber = window.prompt("한 자리 숫자를 적어주세요.");
+
+	console.log(inputNumber);
+	console.log(typeof inputNumber);
+
+	if (inputNumber === '7') {
+		alert('Lucky!');
+	} else if (inputNumber === '0') {
+		alert('Zero!');
+	} else if (inputNumber === '1') {
+		alert('One!');
+	} else {
+		alert('Unlucky!');
+	}
+
+	// Same as above, but using switch statement
+	switch (inputNumber) {
+		case '0':
+			alert('Zero!');
+			break;
+		case '1':
+			alert('One!');
+			break;
+		case '7':
+			alert('Lucky!');
+			break;
+		default:
+			alert('Unlucky!');
+			break;
+	}
+</script>
+</body>
+</html>

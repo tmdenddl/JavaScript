@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scroll</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles/css">
+	<script 
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+
+	<style>
+		body {
+			text-align: center;
+			height: 2000px;
+		}
+
+		.top {
+			background-color: skyblue;
+			height: 200px;
+			line-height: 200px;
+			vertical-align: middle;
+			font-size: 100px;
+			color: white;
+			margin-bottom: 30px;
+		}
+
+		.go-to-top {
+			background-color: skyblue;
+			width: 150px;
+			height: 36px;
+			font-size: 15px;
+			color: white;
+			position: fixed;
+			bottom: 24px;
+			right: 25px;
+			z-index: 99;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">
+		Fade away...
+	</div>
+
+	<button class="go-to-top">Go To Top</button>
+
+	
+	<script type="text/javascript">
+		$(window).on('scroll', function() {
+			console.log($(window).scrollTop());
+
+			// When at top: 1 - 0 / 200 = 1 - 0 = 1
+			// When at half way down: 1 - 100 / 200 = 1 - 0.5 = 0.5
+			// When at bottom: 1 - 200 / 200 = 1 - 1 = 0
+			$('.top').css('opacity', 1 - $(window).scrollTop() / $('.top').height());
+		})
+
+		$('.go-to-top').on('click', function() {
+			// $(window).scrollTop(0);
+			$('html, body').animate({scrollTop: 0}, 500);
+		})
+	</script>
+</body>
+</html>

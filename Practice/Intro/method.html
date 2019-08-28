@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Method</title>
+</head>
+<body>
+<script type="text/javascript">
+	function logTask(task) {
+		console.log(task + ": 완료!");
+		console.log("-");
+	}
+
+	logTask("보고서 작성");
+	logTask("재고 확인");
+	logTask("해외 주문");
+	logTask("담당자 파견");
+	logTask("영수증 발행");
+
+	// 여기에 logParticipant 함수를 써주세요.
+	// 코드를 작성해주세요.
+	function logParticipant(participant) {
+		console.log(participant + "(이)가 대화에 참여했습니다.");
+	}
+
+	// 테스트 코드
+	logParticipant('동욱');
+	logParticipant('신의');
+	logParticipant('윤수');
+	logParticipant('지은');
+	logParticipant('동준');
+	logParticipant('영훈');
+
+	// 여기에 expressMultiplication 함수를 써주세요.
+	// 코드를 작성해주세요.
+	// function expressMultiplication(a, b) {
+	// 	console.log(a + " * " + b + " = " + (a*b));
+	// }
+
+	function expressMultiplication(a, b) {
+		console.log(String(a) + " * " + String(b) + " = " + String(a * b));
+	}
+
+	// 테스트 코드
+	expressMultiplication(3, 4);
+	expressMultiplication(3, 2);
+	expressMultiplication(7, 5);
+	expressMultiplication(8, 9);
+	expressMultiplication(5, 5);
+	expressMultiplication(9, 9);
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Animation</title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    button {
+      margin-bottom: 20px;
+    }
+
+    div {
+      position: absolute;
+      background: gray;
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<div></div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+<script> 
+$(document).ready(function() {
+  $("button").on('click', function() {
+    $("div").animate({left: '250px'}, 1000, 'easeOutElastic');
+  });
+});
+</script> 
+
+</body>
+</html>

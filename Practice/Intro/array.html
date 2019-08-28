@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array</title>
+</head>
+<body>
+<script type="text/javascript">
+	var brands = ['Apple', 'Coca-Cola', 'Starbucks'];
+	var iPad = [800, 'Black', true]; // Different types of data can be stored in the array
+
+	console.log(typeof brands); // object
+	console.log(brands[1]); // "Coca-Cola"
+
+	// String is treated similar to an array
+	// Array is mutable, whereas String is immutable
+	var text1 = 'Hello';
+	var text2 = ['H', 'e', 'l', 'l', 'o'];
+	console.log(text1.length);
+	console.log(text2.length);
+
+	// Matrix
+	var products = [['iPhone', 'iMac', 'Macbook'], ['Coke', 'Diet Coke'], ['Americano', 'Latte', 'Tea']]
+
+	console.log(products); // [Array(3), Array(2), Array(3)]
+
+	console.log(products[0]); // ['iPhone', 'iMac', 'Macbook']
+
+	console.log(products[0][2]); // 'Macbook'
+
+	var appleProducts = products[0];
+
+
+	// length
+	var brands = ['Apple', 'Coca-Cola', 'Starbucks'];
+	console.log(brands.length);
+
+	// indexOf
+	var brands = ['Apple', 'Coca-Cola', 'Starbucks'];
+	console.log(brands.indexOf('Starbucks'));
+	console.log(brands.indexOf('Kakao'));
+
+	// push
+	var brands = ['Apple', 'Coca-Cola', 'Starbucks'];
+
+	brands.push('Kakao');
+	console.log(brands);
+
+	brands.push('Samsung', 'LG', 'Facebook');
+	console.log(brands);
+
+	// pop
+	var brands = ['Apple', 'Coca-Cola', 'Starbucks'];
+
+	var lastBrand = brands.pop();
+
+	console.log(lastBrand);
+	console.log(brands);
+
+	// join
+	var brands = ['Apple', 'Coca-Cola', 'Starbucks'];
+	console.log(brands.join());
+
+	var brands = ['Apple', 'Coca-Cola', 'Starbucks'];
+	console.log(brands.join('###'));
+</script>
+</body>
+</html>

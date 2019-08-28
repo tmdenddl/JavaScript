@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Type Casting</title>
+</head>
+<body>
+<script type="text/javascript">
+	var scroeString = '10'; // String
+	Number(scroeString);    // Number
+	var scoreNum = 20; // Number
+	String(scoreNum);  // String
+
+	var favouriteNumber = window.prompt("가장 좋아하는 숫자를 적어주세요."); // Save the Input as String
+
+	var str = 'Number'; // String
+	Number(str); // NaN: Not a Number (can't type cast)
+
+
+	// 숫자형과 문자열 재료
+	var material1 = '3';
+	var material2 = 3;
+	var material3 = '4';
+	var material4 = 10;
+
+	// 요리 결과
+	var result1;
+	var result2;
+
+	// 형 변환을 사용해서 result1에는 문자열 '30'을, result2에는 숫자형 40을 만들어 넣어보세요.
+	result1 = String(material2 * material4);
+	result2 = Number(material3) * material4;
+
+	// 테스트 코드
+	console.log(result1);
+	console.log(typeof result1);
+	console.log(result2);
+	console.log(typeof result2);
+</script>
+</body>
+</html>

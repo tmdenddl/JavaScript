@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>If</title>
+</head>
+<body>
+<script type="text/javascript">
+	var inputNumber = window.prompt("한 자리 숫자를 적어주세요.");
+
+	console.log(inputNumber);
+	console.log(typeof inputNumber);
+
+	if (inputNumber === '7') {
+		alert('Lucky!');
+	} else if (inputNumber === '0') {
+		alert('Zero!');
+	} else if (inputNumber === '1') {
+		alert('One!');
+	} else {
+		alert('Unlucky!');
+	}
+
+	var num = 12;
+
+	if (num % 2 === 0 && num % 3 === 0) {
+		console.log(num + '는 6의 배수입니다.');
+	} else {
+		console.log(num + '는 6의 배수가 아닙니다.');
+	}
+
+
+	function whatShouldICallYou(myAge, myGender, yourAge, yourGender) {
+    // 나의 나이, 나의 성별, 상대방의 나이, 상대방의 성별
+    // 총 4개의 정보를 활용해서 호칭을 결정해보세요.
+    	if (myAge === yourAge) {
+    		return "친구";
+    	} else if (myAge > yourAge && yourGender === 'female') {
+    		return "여동생";
+    	} else if (myAge > yourAge && yourGender === 'male') {
+    		return "남동생";
+    	} else if (myAge < yourAge && myGender === 'male' && yourGender === 'female') {
+    		return "누나";
+    	} else if (myAge < yourAge && myGender === 'male' && yourGender === 'male') {
+    		return "형";
+    	} else if (myAge < yourAge && myGender === 'female' && yourGender === 'female') {
+    		return "언니";
+    	} else if (myAge < yourAge && myGender === 'female' && yourGender === 'male') {
+    		return "오빠";
+    	}
+	}
+
+	// 테스트 코드
+	var result1 = whatShouldICallYou(23, 'male', 25, 'female');
+	var result2 = whatShouldICallYou(21, 'female', 21, 'female');
+	var result3 = whatShouldICallYou(25, 'female', 22, 'male');
+
+	console.log(result1);
+	console.log(result2);
+	console.log(result3);
+</script>
+</body>
+</html>

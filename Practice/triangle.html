@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Triangle</title>
+</head>
+<body>
+<script>
+	function printTriangle(height) {
+	    text = '';
+	    for (var i = 0; i < height; i = i + 1) {
+	        text = text + '*';
+	        console.log(text);
+	    }
+	}
+
+	// 테스트 코드
+	console.log('높이: 5');
+	printTriangle(5);
+
+	console.log('높이: 3');
+	printTriangle(3);
+
+	console.log('높이: 1');
+	printTriangle(1);
+</script>
+</body>
+</html>

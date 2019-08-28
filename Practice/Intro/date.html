@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date</title>
+</head>
+<body>
+<script type="text/javascript">
+	var date = new Date();
+
+	// new Date
+	// 1988년 6월 11일 5시 25분 30초
+	var date1 = new Date('June 11, 1988 05:25:30');
+	var date2 = new Date('1988-06-11T05:25:30');
+
+	// 1999년 12월 15일 (날짜만)
+	var date3 = new Date('1999-12-15');
+	var date4 = new Date('12/15/1999');
+	var date5 = new Date('December 15 1999');
+	var date6 = new Date('Dec 15 1999');
+
+	// get
+	var date = new Date('June 11, 1988 05:25:30');
+
+	console.log(date.getFullYear());
+	console.log(date.getMonth()); // starts from 0 == Jan
+	console.log(date.getDate());
+	console.log(date.getDay()); // starts from 0 == Sunday
+	console.log(date.getHours());
+	console.log(date.getMinutes());
+	console.log(date.getSeconds());
+	console.log(date.getMilliseconds());
+	console.log(date.toString());
+	console.log(date.toLocaleString());
+	console.log(date.toLocaleDateString());
+	console.log(date.toLocaleTimeString());
+	console.log(date.getTime());
+
+	var date = new Date('June 11, 1988 05:25:30');
+	console.log(date.getTime() + 'ms');
+	console.log(date.getTime()/1000 + '초');
+	console.log(date.getTime()/1000/60 + '분');
+	console.log(date.getTime()/1000/60/60 + '시간');
+</script>
+</body>
+</html>
